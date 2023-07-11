@@ -1,9 +1,11 @@
 import './App.css';
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LandingPage from './components/LandingPage';
-import UserDetails from './components/UserDetails';
 import store from './store/store';
+
+const UserDetails = lazy(() => import('./components/UserDetails'));
 
 const appRouter = createBrowserRouter([
   {
@@ -12,7 +14,10 @@ const appRouter = createBrowserRouter([
   },
   {
     path: '/details',
-    element: <UserDetails />
+    element:
+      <Suspense fallback={null}>
+        <UserDetails />
+      </Suspense>
   }
 ])
 

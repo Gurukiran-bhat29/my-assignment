@@ -8,16 +8,16 @@
   top: 22%;
   width: 38%;
   height: 500px;
-  border: 1px solid black;
   border-radius: 5%;
-  overflow: hidden
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header {
   text-align: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  background-color: blueviolet;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: rgb(216, 227, 227);
   z-index: -1;
 }
 
