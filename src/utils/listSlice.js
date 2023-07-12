@@ -8,7 +8,7 @@ const listSlice = createSlice({
   reducers: {
     storeDetails: (state, action) => {
       state.userList = action.payload;
-    },
+    }
   }
 })
 

@@ -1,11 +1,13 @@
 import './App.css';
-import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LandingPage from './components/LandingPage';
-import store from './store/store';
-
-const UserDetails = lazy(() => import('./components/UserDetails'));
+import UserDetails from './components/UserDetails';
+import Profile from './components/Profile';
+import Gallery from './components/Gallery';
+import Posts from './components/Posts';
+import Todo from './components/Todo';
+import store from './utils/store';
 
 const appRouter = createBrowserRouter([
   {
@@ -13,11 +15,26 @@ const appRouter = createBrowserRouter([
     element: <LandingPage />
   },
   {
-    path: '/details',
-    element:
-      <Suspense fallback={null}>
-        <UserDetails />
-      </Suspense>
+    path: '/',
+    element: <UserDetails />,
+    children: [
+      {
+        path: 'profile',
+        element: <Profile />
+      },
+      {
+        path: 'posts',
+        element: <Posts />
+      },
+      {
+        path: 'gallery',
+        element: <Gallery />
+      },
+      {
+        path: 'todo',
+        element: <Todo />
+      }
+    ]
   }
 ])
 

@@ -1,30 +1,33 @@
 .landingContainer {
-  display: flex;
-  justify-content: center;
+  height: 98vh;
+  background-color: #4454cc;
 }
 
 .selectAccount {
-  position: absolute;
-  top: 22%;
   width: 38%;
-  height: 500px;
   border-radius: 5%;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.header {
+.centerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accountHeader {
   text-align: center;
-  padding-top: 4%;
-  padding-bottom: 4%;
+  padding-top: 7%;
+  padding-bottom: 7%;
   background-color: rgb(216, 227, 227);
-  z-index: -1;
 }
 
 .listsContainer {
   height: 420px;
-  margin-left: 1%;
-  margin-right: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: white;
   overflow-x: hide;
   overflow-y: auto;
 }
@@ -46,4 +49,58 @@
 
 .list {
   margin-left: 10px;
+}
+
+.srollBar {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsContainer {
+  display: flex;
+  height: 90.5vh;
+  padding: 2%;
+}
+
+.profileTab {
+  width: 16%;
+  background-color: #4454cc;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.tab {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  color: white;
+  text-decoration: none;
+}
+
+.borderBottom {
+  border-bottom: 1px solid wheat;
+}
+
+.profile {
+  flex: 1;
+  margin-left: 3%;
+  margin-right: 1%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid black;
+}
+
+.userProfile {
+  display: flex;
+}
+
+.profileName {
+  padding-left: 15px;
 }

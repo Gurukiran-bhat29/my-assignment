@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useDispatch, useSelector } from "react-redux";
-import { storeDetails } from "../store/listSlice";
+import { storeDetails } from "../utils/listSlice";
+import { selectedUser } from "../utils/userSlice";
 
 const LandingPage = () => {
   const lists = useSelector(store => store.lists.userList);
@@ -16,23 +17,27 @@ const LandingPage = () => {
     dispatch(storeDetails(jsonResponse.users));
   }
 
+  const navigationToProfile = (index) => {
+    dispatch(selectedUser(lists[index]))
+    navigate('profile');
+  }
+
   useEffect(() => {
     lists.length === 0 && getDetails();
   }, [])
 
   return (
-    <div className='landingContainer'>
+    <div className='landingContainer centerItem'>
       <div className='selectAccount'>
-        <div className='header'>
-          <span >Select Account</span>
+        <div className='accountHeader'>
+          <label>Select Account</label>
         </div>
-
         <div className="listsContainer">
-          <Scrollbars style={{ width: '100%', height: '100%' }}>
+          <Scrollbars className="srollBar">
             {lists.map((list, index) => {
               return (
                 <div
-                  onClick={() => navigate('details')}
+                  onClick={() => navigationToProfile(index)}
                   key={list.id}
                   className='userDetails'
                 >

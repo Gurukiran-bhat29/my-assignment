@@ -1,8 +1,11 @@
-const UserDetails = () => {
+import { Outlet } from "react-router-dom";
+import ProfileTab from "./ProfileTab";
 
+const UserDetails = () => {
   return (
-    <div>
-      <span>userDetails</span>
+    <div className="detailsContainer">
+      <ProfileTab />
+      <Outlet />
     </div>
   )
 }
