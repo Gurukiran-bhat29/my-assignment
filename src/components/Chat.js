@@ -1,16 +1,14 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { hide } from "../utils/popUpSlice";
-
+import { useState } from "react";
 const Chats = () => {
   const [showChat, setShowChat] = useState(false);
 
   const userList = useSelector(store => store.lists.userList);
-
   const dispatch = useDispatch();
 
   const toggleChat = () => {
-    !showChat && dispatch(hide());
+    showChat && dispatch(hide());
     setShowChat(!showChat)
   }
 

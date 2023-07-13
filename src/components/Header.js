@@ -6,7 +6,7 @@ const Header = ({ name, user, lists }) => {
   const dispatch = useDispatch();
 
   const popUp = useSelector(store => store.popUp.headerPopUp);
-  
+
   return (
     <div>
       <div className="header">
