@@ -20,7 +20,7 @@ const LandingPage = () => {
   const navigationToProfile = (index) => {
     dispatch(UpdateList(index));
     dispatch(selectedUser(lists[index]));
-    
+
     navigate('profile');
   }
 
@@ -32,7 +32,7 @@ const LandingPage = () => {
     <div className='landingContainer centerItem'>
       <div className='selectAccount'>
         <div className='accountHeader'>
-          <label>Select Account</label>
+          <label className="landingHeader">Select an account</label>
         </div>
         <div className="listsContainer">
           <Scrollbars className="srollBar">
