@@ -12,7 +12,7 @@ const Chats = () => {
       <div className='chatInboxContainer'>
         {showChat && userList.map((list) => {
           return (
-            <div className="chatInbox">
+            <div key={list.id} className="chatInbox">
               <img className='userDp' alt='userDp' src={list.profilepicture} />
               <label className="chatName">{list.name}</label>
             </div>

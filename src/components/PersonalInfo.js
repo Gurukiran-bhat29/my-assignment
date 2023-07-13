@@ -8,49 +8,59 @@ const PersonalInfo = ({ details }) => {
             alt='profilePic'
             src={details?.profilepicture}
           />
-          <p>{details?.name}</p>
+          <label className="userName margin">{details?.name}</label>
         </div>
-        <div className="personalDetails detailsBorder">
-          <div className="personalLabels">
-            <p>Username :</p>
-            <p>e-mail :</p>
-            <p>Phone :</p>
-            <p>Website :</p>
+        <div className="detailsBorder">
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">Username :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.username}</label></div>
           </div>
-          <div className="personalInfo">
-            <p>{details?.username}</p>
-            <p>{details?.email}</p>
-            <p>{details?.phone}</p>
-            <p>{details?.website}</p>
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">e-mail :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.email}</label></div>
           </div>
-        </div>
-        <div className="personalDetails">
-          <div className="personalLabels">
-            <p>Company Name :</p>
-            <p>catchphrase :</p>
-            <p>bs :</p>
+          <div className="personalDetails">
+            <div className="personalLabels" ><label className="userLabel">Phone :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.phone}</label></div>
           </div>
-          <div className="personalInfo">
-            <p>{details?.company?.name}</p>
-            <p>{details?.company?.catchPhrase}</p>
-            <p>{details?.company?.bs}</p>
+          <div className="personalDetails">
+            <div className="personalLabels" ><label className="userLabel">Website :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.website}</label></div>
           </div>
         </div>
+        <>
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">Company Name :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.company?.name}</label></div>
+          </div>
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">catchphrase :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.company?.catchPhrase}</label></div>
+          </div>
+          <div className="personalDetails">
+            <div className="personalLabels" ><label className="userLabel">bs :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.company?.bs}</label></div>
+          </div>
+        </>
       </div>
       <div className="sectionTwo">
-        <p>Address :</p>
-        <div className="personalDetails">
-          <div className="personalLabels">
-            <p>Street :</p>
-            <p>Suite :</p>
-            <p>City :</p>
-            <p>Zipcode :</p>
+        <p className="userLabel">Address :</p>
+        <div className="addressWidth">
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">Street :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.address?.street}</label></div>
           </div>
-          <div className="personalInfo">
-            <p>{details?.address?.street}</p>
-            <p>{details?.address?.suite}</p>
-            <p>{details?.address?.city}</p>
-            <p>{details?.address?.zipcode}</p>
+          <div className="personalDetails">
+            <div className="personalLabels"><label className="userLabel">Suite :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.address?.suite}</label></div>
+          </div>
+          <div className="personalDetails">
+            <div className="personalLabels" ><label className="userLabel">City :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.address?.city}</label></div>
+          </div>
+          <div className="personalDetails">
+            <div className="personalLabels" ><label className="userLabel">Zipcode :</label></div>
+            <div className="personalInfo"><label className="userName">{details?.address?.zipcode}</label></div>
           </div>
         </div>
       </div>

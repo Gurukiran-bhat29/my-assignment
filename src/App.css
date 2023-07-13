@@ -69,7 +69,8 @@
 .detailsContainer {
   display: flex;
   height: 90.5vh;
-  padding: 2%;
+  padding: 1.5%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .profileTab {
@@ -88,7 +89,6 @@
   text-decoration: none;
   color: rgb(193, 186, 186);
   font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .selectedTab {
@@ -102,40 +102,71 @@
 
 .profile {
   flex: 1;
-  margin-left: 3%;
-  margin-right: 1%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 2%;
+  margin-right: 0.5%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(210, 204, 204);
+}
+
+.headerName {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(87, 82, 82)
+}
+
+.margin {
+  margin-top: 4%;
+  margin-bottom: 1%;
 }
 
 .userProfile {
   display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
 .profileName {
+  font-size: 22px;
   padding-left: 15px;
+  color: rgb(87, 82, 82)
+}
+
+.profileEmail {
+  font-size: 22px;
+  padding-left: 15px;
+  color: rgb(153, 146, 146);
+}
+
+.userName {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(87, 82, 82);
+}
+
+.userLabel {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(153, 146, 146)
 }
 
 .profileDetails {
   display: flex;
-  margin-top: 2.5%;
+  margin-top: 2%;
 }
 
 .sectionOne {
   width: 40%;
-  border-right: 1px solid black;
+  border-right: 1px solid rgb(210, 204, 204);
+  padding-right: 2.5%;
 }
 
 .sectionTwo {
   width: 60%;
+  padding-left: 2.5%;
 }
 
 .profileImage {
@@ -152,24 +183,22 @@
 
 .personalDetails {
   display: flex;
-  justify-content: center;
+  padding: 1.5%;
 }
 
 .personalLabels {
   width: 40%;
   padding: 1%;
   text-align: right;
-  background-color: blue;
 }
 
 .personalInfo {
   width: 60%;
   padding: 1%;
-  background-color: aquamarine;
 }
 
 .detailsBorder {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(210, 204, 204);
 }
 
 .headerProfile {
@@ -193,12 +222,18 @@
 .otherUser {
   display: flex;
   padding: 10px;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(210, 204, 204);
   justify-content: center;
 }
 
+.addressWidth {
+  width: 50%;
+}
+
 .paddingLeft {
-  padding-left: 10px
+  padding-left: 10px;
+  font-size: 18px;
+  color: rgb(87, 82, 82);
 }
 
 .signOut {
@@ -215,14 +250,13 @@
 
 .ChatContainer {
   position: fixed;
-  width: 280px;
+  width: 300px;
   bottom: 0;
   right: 4%;
   border: 1px solid #4454cc;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   overflow: hidden;
-  /* height: 400px; */
 }
 
 .chats {
@@ -233,16 +267,20 @@
   text-align: center;
   padding: 5%;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .chatInbox {
   display: flex;
   align-items: center;
-  padding: 3%;
+  padding: 4%;
 }
 
 .chatName {
   padding-left: 5%;
+  font-size: 16px;
+  color: rgb(87, 82, 82);
 }
 
 .userDp {

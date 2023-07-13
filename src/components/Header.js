@@ -1,17 +1,15 @@
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "../utils/popUpSlice";
 import SignOutPopUp from "./SignOutPopUp";
 
 const Header = ({ name, user, lists }) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const popUp = useSelector(store => store.popUp.headerPopUp);
   return (
     <div>
       <div className="header">
-        <p>{name}</p>
+        <p className="headerName">{name}</p>
         <div className="userProfile"
           onClick={() => dispatch(toggle())}
         >

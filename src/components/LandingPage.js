@@ -4,6 +4,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useDispatch, useSelector } from "react-redux";
 import { storeDetails, UpdateList } from "../utils/listSlice";
 import { selectedUser } from "../utils/userSlice";
+import { hide } from "../utils/popUpSlice";
 
 const LandingPage = () => {
   const lists = useSelector(store => store.lists.userList);
@@ -26,6 +27,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     getDetails();
+    dispatch(hide());
   }, [])
 
   return (

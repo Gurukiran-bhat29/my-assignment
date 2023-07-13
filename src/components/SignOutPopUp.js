@@ -7,7 +7,7 @@ const SignOutPopUp = ({ user, lists }) => {
     <div className="headerProfile">
       <img className='headerImage' alt='user' src={user?.profilepicture} />
       <p className="profileName">{user?.name}</p>
-      <p className="profileName">{user?.email}</p>
+      <p className="profileEmail">{user?.email}</p>
       <div className="otherUser">
         <img
           className="userImage"
