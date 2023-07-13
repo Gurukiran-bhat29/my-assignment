@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useDispatch, useSelector } from "react-redux";
-import { storeDetails } from "../utils/listSlice";
+import { storeDetails, UpdateList } from "../utils/listSlice";
 import { selectedUser } from "../utils/userSlice";
 
 const LandingPage = () => {
@@ -18,12 +18,14 @@ const LandingPage = () => {
   }
 
   const navigationToProfile = (index) => {
-    dispatch(selectedUser(lists[index]))
+    dispatch(UpdateList(index));
+    dispatch(selectedUser(lists[index]));
+    
     navigate('profile');
   }
 
   useEffect(() => {
-    lists.length === 0 && getDetails();
+    getDetails();
   }, [])
 
   return (

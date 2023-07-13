@@ -99,8 +99,98 @@
 
 .userProfile {
   display: flex;
+  cursor: pointer;
 }
 
 .profileName {
   padding-left: 15px;
+}
+
+.profileDetails {
+  display: flex;
+  margin-top: 2.5%;
+}
+
+.sectionOne {
+  width: 40%;
+  border-right: 1px solid black;
+}
+
+.sectionTwo {
+  width: 60%;
+}
+
+.profileImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilePic {
+  width: 50%;
+  height: 47%;
+  border-radius: 50%;
+}
+
+.personalDetails {
+  display: flex;
+  justify-content: center;
+}
+
+.personalLabels {
+  width: 40%;
+  padding: 1%;
+  text-align: right;
+  background-color: blue;
+}
+
+.personalInfo {
+  width: 60%;
+  padding: 1%;
+  background-color: aquamarine;
+}
+
+.detailsBorder {
+  border-bottom: 1px solid black;
+}
+
+.headerProfile {
+  width: 300px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
+  right: 3%;
+  top: 110px;
+  text-align: center;
+  padding: 2%;
+}
+
+.headerImage {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+}
+
+.otherUser {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid black;
+  justify-content: center;
+}
+
+.paddingLeft {
+  padding-left: 10px
+}
+
+.signOut {
+  margin-top: 4%;
+  font-size: larger;
+  font-weight: bold;
+  padding: 13px;
+  color: white;
+  background-color: rgb(226, 79, 79);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
