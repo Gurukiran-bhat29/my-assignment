@@ -7,8 +7,10 @@ const Posts = () => {
 
   return (
     <div className="profile">
-      <Header name='Posts' user={userDetails}  lists={lists} />
-      <div className="centerItem"><p>Coming soon</p></div>
+      <Header name='Posts' user={userDetails} lists={lists} />
+      <div className="centerItem">
+        <p className="message">Coming soon</p>
+      </div>
     </div>
   )
 }

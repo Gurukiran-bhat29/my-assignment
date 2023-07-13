@@ -1,4 +1,7 @@
 .landingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 98vh;
   background-color: #4454cc;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -15,6 +18,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70vh;
+}
+
+.message {
+  font-size: 100px;
+  font-weight: bolder;
+  color: rgb(216, 227, 227);
 }
 
 .accountHeader {

@@ -8,7 +8,9 @@ const Gallery = () => {
   return (
     <div className="profile">
       <Header name='Gallery' user={userDetails} lists={lists} />
-      <div className="centerItem"><p>Coming soon</p></div>
+      <div className="centerItem">
+        <p className="message">Coming soon</p>
+      </div>
     </div>
   )
 }

@@ -31,7 +31,7 @@ const LandingPage = () => {
   }, [])
 
   return (
-    <div className='landingContainer centerItem'>
+    <div className='landingContainer'>
       <div className='selectAccount'>
         <div className='accountHeader'>
           <label className="landingHeader">Select an account</label>

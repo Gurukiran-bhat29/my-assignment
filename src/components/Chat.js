@@ -1,13 +1,21 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { hide } from "../utils/popUpSlice";
 
 const Chats = () => {
   const [showChat, setShowChat] = useState(false);
 
   const userList = useSelector(store => store.lists.userList);
 
+  const dispatch = useDispatch();
+
+  const toggleChat = () => {
+    !showChat && dispatch(hide());
+    setShowChat(!showChat)
+  }
+
   return (
-    <div className="ChatContainer" onClick={() => setShowChat(!showChat)}>
+    <div className="ChatContainer" onClick={() => toggleChat()}>
       <label className="chats">Chats</label>
       <div className='chatInboxContainer'>
         {showChat && userList.map((list) => {
